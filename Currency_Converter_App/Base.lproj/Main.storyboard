@@ -1,24 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZBx-ql-MSK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_Converter_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qz8-DV-hmW">
+                                <rect key="frame" x="0.0" y="209" width="414" height="536"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Enter the Currency" translatesAutoresizingMaskIntoConstraints="NO" id="5Se-ve-cii">
+                                <rect key="frame" x="0.0" y="158" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL2-Hy-RtT">
+                                <rect key="frame" x="106" y="775" width="202" height="62"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="vM5-rn-DxX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.right.fill" catalog="system" title="  Go to Convert">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="convertButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZFb-79-1d9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.070674814283847809" green="0.50270617008209229" blue="0.95680135488510132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5Se-ve-cii" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="04h-rw-S8E"/>
+                            <constraint firstItem="5Se-ve-cii" firstAttribute="trailing" secondItem="Qz8-DV-hmW" secondAttribute="trailing" id="1xx-oR-Z5M"/>
+                            <constraint firstItem="bL2-Hy-RtT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="6RX-1M-G4e"/>
+                            <constraint firstItem="5Se-ve-cii" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D6b-S8-thh"/>
+                            <constraint firstItem="5Se-ve-cii" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="H9e-yQ-1Oi"/>
+                            <constraint firstItem="Qz8-DV-hmW" firstAttribute="top" secondItem="5Se-ve-cii" secondAttribute="bottom" id="Lfh-Rf-RlG"/>
+                            <constraint firstItem="5Se-ve-cii" firstAttribute="leading" secondItem="Qz8-DV-hmW" secondAttribute="leading" id="O7j-KP-wFB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bL2-Hy-RtT" secondAttribute="bottom" constant="25" id="j2a-4q-eo7"/>
+                            <constraint firstItem="bL2-Hy-RtT" firstAttribute="top" secondItem="Qz8-DV-hmW" secondAttribute="bottom" constant="30" id="l80-XO-mMs"/>
+                            <constraint firstItem="Qz8-DV-hmW" firstAttribute="centerX" secondItem="bL2-Hy-RtT" secondAttribute="centerX" id="sBp-ie-x5H"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FM8-pU-jwi"/>
+                    <connections>
+                        <outlet property="searchBar" destination="5Se-ve-cii" id="F6N-Mr-SXw"/>
+                        <outlet property="tableView" destination="Qz8-DV-hmW" id="EnM-yS-13a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k3P-oj-Lpy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZBx-ql-MSK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="mQK-95-vjF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
+                            <color key="textColor" red="0.27573114633560181" green="0.086601592600345612" blue="0.46335315704345703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="1" vertical="2"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jo1-Sh-m2d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgY-N2-CaV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="82"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.016583433374762535" green="0.012561582960188389" blue="0.0056618098169565201" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

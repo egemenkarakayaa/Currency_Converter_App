@@ -8,14 +8,25 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBAction func convertButton(_ sender: UIButton) {
         
         
     }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        title = "Currency Converter"
+        
+        
+    }
+    
 
-
+    
 }
-
