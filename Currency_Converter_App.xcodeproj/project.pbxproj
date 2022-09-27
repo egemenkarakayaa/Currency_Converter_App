@@ -60,8 +60,8 @@
 				B2EF790E28D4B0C6000F53D3 /* SceneDelegate.swift */,
 				B2EF791028D4B0C6000F53D3 /* ViewController.swift */,
 				B2EF791228D4B0C6000F53D3 /* Main.storyboard */,
-				B2EF791528D4B0C7000F53D3 /* Assets.xcassets */,
 				B2EF791728D4B0C7000F53D3 /* LaunchScreen.storyboard */,
+				B2EF791528D4B0C7000F53D3 /* Assets.xcassets */,
 				B2EF791A28D4B0C7000F53D3 /* Info.plist */,
 			);
 			path = Currency_Converter_App;
